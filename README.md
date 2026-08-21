@@ -1,40 +1,69 @@
-# 🖐️ Finger Counter
+# 🖐️ Finger Counter & Hand Tracking
 
-A real-time hand gesture counter built with **Python**, **OpenCV**, and **MediaPipe** — hold up your hand to the webcam and it detects how many fingers you're showing (0–5), displaying the count along with a matching image overlay.
-
-## 📸 Demo
-
-A working demo of this project is on my LinkedIn — [link in the post](#).
+A real-time Finger Counting and Hand Tracking project built using Python, OpenCV, and MediaPipe. The application detects a hand through the webcam, tracks its landmarks, identifies raised fingers, and displays the total finger count.
 
 ## 🚀 Features
 
-- Real-time hand tracking via webcam
-- Counts how many fingers are raised (0 to 5) using landmark position logic
-- Displays a corresponding reference image overlay for the detected count
-- Large on-screen digit showing the live finger count
-- Live FPS counter for performance monitoring
-- Built on a reusable `handDetector` class (`HandTrackingModule.py`)
+- Real-time hand tracking using MediaPipe
+- Detects 21 hand landmarks
+- Counts raised fingers from 0–5
+- Displays finger count on the webcam feed
+- Shows corresponding finger images
+- Displays real-time FPS
+- Reusable HandTrackingModule
 
 ## 🛠️ Tech Stack
 
-- **Python 3**
-- **[OpenCV](https://opencv.org/)** — video capture, image processing, drawing overlays
-- **[MediaPipe](https://developers.google.com/mediapipe)** — hand landmark detection
+- **Python**
+- **OpenCV** – webcam and image processing
+- **MediaPipe** – hand landmark detection
 
 ## 📁 Project Structure
 
-| File / Folder | Description |
-|---|---|
-| `HandTrackingModule.py` | Reusable hand-tracking class (`handDetector`) — detects hands and extracts landmark positions |
-| `fingercounter.py` | Main script — reads landmark positions, determines which fingers are up, counts them, and overlays the matching image |
-| `FingerImages/` | Reference images (one per count, 0–5) shown as an overlay in the top-left corner of the video feed |
+FingerCounter/ 
+│ 
+├── FingerImages/ 
+│ ├── 1.png 
+│ ├── 2.png 
+│ ├── 3.png 
+│ ├── 4.png 
+│ ├── 5.png 
+│ └── 6.png 
+│ 
+├── fingureCount.py 
+├── HandTrackingModule.py 
+└── README.md
+
+## 🧠 How It Works
+
+Webcam
+   ↓
+OpenCV captures frame
+   ↓
+MediaPipe detects hand
+   ↓
+21 landmarks are extracted
+   ↓
+Finger positions are analyzed
+   ↓
+Number of raised fingers is calculated
+   ↓
+Result is displayed on screen
+
+For the four fingers, the program compares the Y-coordinate of the fingertip with its lower joint. For the thumb, it compares the X-coordinate to determine whether it is extended.
+
+Example:
+
+tipIds = [4, 8, 12, 16, 20]
+
+These represent the fingertips of the thumb, index, middle, ring, and pinky fingers.
 
 ## 📦 Installation
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/porasnehra/finger_counter.git
-   cd finger_counter
+   git clone https://github.com/bgautamk9045/HandGestureProjectCount
+   cd HandGestureProjectCount
    ```
 
 2. Install the dependencies
@@ -42,26 +71,26 @@ A working demo of this project is on my LinkedIn — [link in the post](#).
    pip install opencv-python mediapipe
    ```
 
-## ▶️ Usage
+## How to Run
 
-Run the main script with your webcam connected:
+py fingurecounter.py
 
-```bash
-python fingercounter.py
-```
+- Hold your hand up in front of the camera — the count of raised fingers (0–5) will be shown on screen, along with the matching image from `GestureImages/`.
 
-- Hold your hand up in front of the camera — the count of raised fingers (0–5) will be shown on screen, along with the matching image from `FingerImages/`.
-- If your webcam isn't detected, change `cv2.VideoCapture(0)` to `cv2.VideoCapture(1)` (or vice versa) at the top of `fingercounter.py`.
-- Press `q` (or close the window) to exit.
+If the webcam doesn't open, try changing:
+
+cv2.VideoCapture(0)
+to:
+cv2.VideoCapture(1)
 
 ## ⚙️ How It Works
 
-1. **Load Overlays** — On startup, all images inside the `FingerImages/` folder are read, resized to 200x200, and stored in a list.
+1. **Load Overlays** — On startup, all images inside the `GestureImages/` folder are read, resized to 200x200, and stored in a list.
 2. **Track** — `HandTrackingModule.py`'s `handDetector` class uses MediaPipe to detect the hand and extract pixel coordinates for all 21 landmarks each frame.
 3. **Count** — For each of the 5 fingertip landmarks (`[4, 8, 12, 16, 20]`):
    - The **thumb** is checked by comparing whether its tip is to the left/right of the joint below it (handles thumb orientation).
    - The other **4 fingers** are checked by comparing whether the tip is *above* the joint two positions below it (i.e., extended upward).
-4. **Display** — The total count of raised fingers determines which image from `FingerImages/` is overlaid in the corner, and the same number is drawn in large text on screen.
+4. **Display** — The total count of raised fingers determines which image from `GestureImages/` is overlaid in the corner, and the same number is drawn in large text on screen.
 5. **Measure Performance** — FPS is calculated each loop and displayed on screen.
 
 ## 🔮 Future Improvements
@@ -73,7 +102,7 @@ python fingercounter.py
 
 ## 👤 Author
 
-- GitHub: [@porasnehra](https://github.com/porasnehra)
+- GitHub: [@bgautamk9045](https://github.com/bgautamk9045)
 
 ## 📄 License
 
