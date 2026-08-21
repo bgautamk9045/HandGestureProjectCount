@@ -35,19 +35,7 @@ A real-time Finger Counting and Hand Tracking project built using Python, OpenCV
 
 ## 🧠 How It Works
 
-Webcam ->
-   
-OpenCV captures frame ->
-   
-MediaPipe detects hand ->
-   
-21 landmarks are extracted ->
-   
-Finger positions are analyzed ->
-   
-Number of raised fingers is calculated ->
-   
-Result is displayed on screen
+Webcam -> OpenCV captures frame -> MediaPipe detects hand -> 21 landmarks are extracted -> Finger positions are analyzed -> Number of raised fingers is calculated -> Result is displayed on screen
 
 For the four fingers, the program compares the Y-coordinate of the fingertip with its lower joint. For the thumb, it compares the X-coordinate to determine whether it is extended.
 
