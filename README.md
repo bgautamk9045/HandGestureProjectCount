@@ -28,10 +28,10 @@ A real-time Finger Counting and Hand Tracking project built using Python, OpenCV
        - 4.png 
        - 5.png 
        - 6.png
-- fingurecounter.py 
-- HandTrackingModule.py
-- requirements.txt
-- README.md
+  - fingurecounter.py 
+  - HandTrackingModule.py
+  - requirements.txt
+  - README.md
 
 ## 🧠 How It Works
 
