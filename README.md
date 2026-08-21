@@ -20,19 +20,18 @@ A real-time Finger Counting and Hand Tracking project built using Python, OpenCV
 
 ## 📁 Project Structure
 
-FingerCounter/ 
-│ 
-├── FingerImages/ 
-│ ├── 1.png 
-│ ├── 2.png 
-│ ├── 3.png 
-│ ├── 4.png 
-│ ├── 5.png 
-│ └── 6.png 
-│ 
-├── fingureCount.py 
-├── HandTrackingModule.py 
-└── README.md
+- HandGestureProjectCount/ 
+   - GestureImages/
+       - 1.png 
+       - 2.png 
+       - 3.png 
+       - 4.png 
+       - 5.png 
+       - 6.png
+- fingurecounter.py 
+- HandTrackingModule.py
+- requirements.txt
+- README.md
 
 ## 🧠 How It Works
 
