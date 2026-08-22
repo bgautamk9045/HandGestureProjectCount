@@ -80,6 +80,14 @@ cv2.VideoCapture(1)
 4. **Display** — The total count of raised fingers determines which image from `GestureImages/` is overlaid in the corner, and the same number is drawn in large text on screen.
 5. **Measure Performance** — FPS is calculated each loop and displayed on screen.
 
+## Output 
+<img width="800" height="623" alt="image" src="https://github.com/user-attachments/assets/62f50b57-92a8-4237-9438-ece1b162401b" />
+<img width="796" height="622" alt="image" src="https://github.com/user-attachments/assets/f2c7f50e-0936-4def-9b05-063a1fe2bc78" />
+<img width="803" height="633" alt="image" src="https://github.com/user-attachments/assets/4d93fdbf-307d-4b0e-b600-dfbf203561d3" />
+<img width="797" height="629" alt="image" src="https://github.com/user-attachments/assets/e7758be2-fcd5-431e-a23b-10d2d4342dc3" />
+<img width="799" height="625" alt="image" src="https://github.com/user-attachments/assets/981d73a7-ea9e-48ca-a6a2-abc80fa305a8" />
+<img width="806" height="619" alt="image" src="https://github.com/user-attachments/assets/b17056d2-82b8-4821-9b6f-f0de6511070b" />
+
 ## 🔮 Future Improvements
 
 - Support both hands simultaneously with individual counts
