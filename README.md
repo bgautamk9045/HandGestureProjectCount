@@ -81,10 +81,10 @@ cv2.VideoCapture(1)
 5. **Measure Performance** — FPS is calculated each loop and displayed on screen.
 
 ## Output 
-<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/62f50b57-92a8-4237-9438-ece1b162401b" />
-<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/f2c7f50e-0936-4def-9b05-063a1fe2bc78" />
-<img width="150" height="150" alt="Screenshot 2026-08-22 143500" src="https://github.com/user-attachments/assets/12b7c6e0-9f05-4be1-901b-0c1d8ec04d2a" />
-<img width="150" height="150" alt="Screenshot 2026-08-22 143516" src="https://github.com/user-attachments/assets/5121887d-2e54-4e9c-af9c-cd421f7c99ef" />
+<img width="250" height="230" alt="image" src="https://github.com/user-attachments/assets/62f50b57-92a8-4237-9438-ece1b162401b" />
+<img width="250" height="230" alt="image" src="https://github.com/user-attachments/assets/f2c7f50e-0936-4def-9b05-063a1fe2bc78" />
+<img width="250" height="230" alt="Screenshot 2026-08-22 143500" src="https://github.com/user-attachments/assets/12b7c6e0-9f05-4be1-901b-0c1d8ec04d2a" />
+<img width="250" height="230" alt="Screenshot 2026-08-22 143516" src="https://github.com/user-attachments/assets/5121887d-2e54-4e9c-af9c-cd421f7c99ef" />
 
 ## 🔮 Future Improvements
 
