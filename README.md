@@ -91,7 +91,6 @@ cv2.VideoCapture(1)
 - Support both hands simultaneously with individual counts
 - Add gesture-to-action mapping (e.g., 5 fingers = pause, 1 finger = next)
 - Improve thumb detection to work reliably for both left and right hands
-- Add a `requirements.txt` for easier setup
 
 ## 👤 Author
 
